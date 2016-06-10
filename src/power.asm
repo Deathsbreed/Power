@@ -7,12 +7,10 @@ _start:
     movq $3, %rsi                   # second argument
     movq $2, %rdi                   # first argument
     call power                      # call the function
-    ;addq $16, %rsp                  # move the stack pointer back
     pushq %rax                      # save the first answer on stack
     movq $2, %rsi                   # push the second argument
     movq $5, %rdi                   # push the first argument
     call power                      # call the function
-    ;addq $16, %rsp                  # move the stack pointer back
 
     popq %rdi                       # the second answer is still in %rax,
                                     # so we can put the first one from the
